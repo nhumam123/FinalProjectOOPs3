@@ -1,2 +1,4 @@
-package org.product;public class Checkout {
+package org.product;
+
+public class Checkout {
 }

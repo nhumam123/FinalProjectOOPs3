@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="" />
+    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/backup/ActionButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/ActionButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/backup/DetailCellEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/DetailCellEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/backup/DetailCellRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/DetailCellRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/backup/MenuUtamaEtoko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/MenuUtamaEtoko.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/UserCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/UserCollections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/utility/Base64Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/utility/Base64Conversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uml.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/uml.puml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2JcEMkwDQwfn6YvL6hQNhV8V3vP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,9 +56,65 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "225",
+    "last_opened_file_path": "C:/Users/naufa/OneDrive - Bina Nusantara/College/Ganjil 2022 (Sem 3)/Object Oriented Programming/TA/FinalProjectOOPs3/src/main/java/org/ui/backup",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\ui\backup" />
+      <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\ui\backup" />
+      <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\tablemodel\backup" />
+      <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\product\backup" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.ui.backup" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.program.Main" />
+      <module name="FinalProjectOOPs3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.program.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ui.MenuLogin" />
+      <module name="FinalProjectOOPs3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MenuLogin" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -29,5 +125,28 @@
       <updated>1672368928920</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

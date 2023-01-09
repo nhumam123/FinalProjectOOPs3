@@ -1,0 +1,41 @@
+
+@startuml
+skinparam classAttributeIconSize 0
+abstract User {
+    #username: String
+    #password: String
+    #email: String
+    #phoneNumber: String
+    ~User()
+
+}
+
+class Admin{
+    -role: String
+    ~Admin()
+}
+
+class Customer{
+    -address: String
+    -postalCode: String
+    -city: String
+    ~Customer()
+
+}
+
+class Usercollections<O> {
+    -Users: Hashmap<String, O>
+    +UserCollections()
+    +exist(String userhash)
+    +addUser(String userhash, O user)
+    +deleteUser(String userhash)
+    +getUser(String userhash)
+    +updateUser(String userhash, O updatedUser)
+
+}
+
+User <|-- Admin
+User <|-- Customer
+Usercollections *-- Admin
+Usercollections *-- Customer
+@enduml
