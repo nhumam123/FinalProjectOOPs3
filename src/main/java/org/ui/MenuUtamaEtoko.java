@@ -23,7 +23,7 @@ public class MenuUtamaEtoko extends JFrame {
     private JLabel descView;
     private JLabel titleView;
     private JButton tambahkanProdukButton;
-    private JButton resetPesan;
+    private JButton resetPesanBtn;
     private JButton tambahPesan;
     private JButton kurangPesan;
     private JLabel jmlPesanLabel;
@@ -108,6 +108,13 @@ public class MenuUtamaEtoko extends JFrame {
                 int integerHarga = Integer.parseInt(inHarga);
                 integerHarga = integerHarga * integerJml ;
                 hargaPesanLabel.setText(String.valueOf(integerHarga));
+            }
+        });
+        resetPesanBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jmlPesanLabel.setText("0");
+                hargaPesanLabel.setText("0");
             }
         });
     }

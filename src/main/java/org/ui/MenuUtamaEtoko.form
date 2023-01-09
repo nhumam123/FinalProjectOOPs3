@@ -71,7 +71,7 @@
           <text value="Tambahkan Produk"/>
         </properties>
       </component>
-      <component id="88e5c" class="javax.swing.JButton" binding="resetPesan">
+      <component id="88e5c" class="javax.swing.JButton" binding="resetPesanBtn">
         <constraints>
           <grid row="2" column="7" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
