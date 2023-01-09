@@ -6,18 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Base64;
 
-public class Product {
-    private String kodeProduk;
-    private String namaProduk;
-    private String deskripsiProduk;
-    private String imageProduk64;
+abstract class Product {
+    protected String kodeProduk;
+    protected String namaProduk;
+    protected int hargaProduk;
 
-    private int hargaProduk;
-
-    public Product(String kodeProduk, String namaProduk, String deskripsiProduk, int hargaProduk) {
+    public Product(String kodeProduk, String namaProduk, int hargaProduk) {
         this.kodeProduk = kodeProduk;
         this.namaProduk = namaProduk;
-        this.deskripsiProduk = deskripsiProduk;
         this.hargaProduk = hargaProduk;
     }
 
@@ -37,19 +33,6 @@ public class Product {
         this.namaProduk = namaProduk;
     }
 
-    public String getDeskripsiProduk() {
-        return deskripsiProduk;
-    }
-
-    public void setDeskripsiProduk(String deskripsiProduk) {
-        this.deskripsiProduk = deskripsiProduk;
-    }
-
-
-    public String getImageProduk64() {
-        return imageProduk64;
-    }
-
     public int getHargaProduk() {
         return hargaProduk;
     }
@@ -57,22 +40,4 @@ public class Product {
     public void setHargaProduk(int hargaProduk) {
         this.hargaProduk = hargaProduk;
     }
-
-    public void setImageProduk64(String imageProduk64) {
-        this.imageProduk64 = imageProduk64;
-    }
-
-    public void ImgProdukToBase64() throws IOException {
-        File f = new File("C:\\Users\\naufa\\OneDrive - Bina Nusantara\\College\\Ganjil 2022 (Sem 3)\\Screenshot_43.jpg");
-        FileInputStream fin = new FileInputStream(f);
-        byte imageByteArray[] = new byte[(int)f.length()];
-        fin.read(imageByteArray);
-        imageProduk64 = Base64.getEncoder().encodeToString(imageByteArray);
-        fin.close();
-    }
-
-//    public void getImage64() throws IOException {
-//        ImgProdukToBase64();
-//        System.out.println(this.imageProduk64);
-//    }
 }

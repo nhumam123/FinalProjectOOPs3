@@ -1,6 +1,6 @@
 package org.program;
 
-import org.product.Product;
+import org.product.ProductView;
 import org.ui.MenuLogin;
 import org.ui.MenuUtamaEtoko;
 import org.user.UserCollections;
@@ -34,12 +34,12 @@ public class Main {
 //        MenuUtamaEtoko menuToko = new MenuUtamaEtoko();
 //        menuLogin.startMenuLogin();
 
-        Product pd = new Product("ABS3", "Kokonut", "Kokonut yang mantap", 15000);
-        ArrayList<Product> arrpd = new ArrayList<>();
+        ProductView pd = new ProductView("ABS3", "Kokonut",15000, "Kokonut yang mantap");
+        ArrayList<ProductView> arrpd = new ArrayList<>();
         arrpd.add(pd);
-        pd = new Product("AASD", "Chiki", "Chiki sedasp", 12000);
+        pd = new ProductView("AASD", "Chiki", 12000, "Chiki sedasp");
         arrpd.add(pd);
-        pd = new Product("DSF3", "Nutrijawa", "Jamu yang berasal dari jawa",  21000);
+        pd = new ProductView("DSF3", "Nutrijawa",21000, "Jamu yang berasal dari jawa"  );
         arrpd.add(pd);
         MenuUtamaEtoko menuToko = new MenuUtamaEtoko(arrpd);
 
