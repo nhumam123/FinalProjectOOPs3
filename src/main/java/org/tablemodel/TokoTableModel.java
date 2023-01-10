@@ -4,6 +4,7 @@ import org.product.ProductView;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -57,15 +58,5 @@ public class TokoTableModel extends AbstractTableModel {
                 return row.getImageProduk64();
         }
         return null;
-    }
-
-    @Override
-    public boolean isCellEditable(int rowIndex, int columnIndex) {
-        switch (columnIndex) {
-            case 2:
-                return true;
-            default:
-                return false;
-        }
     }
 }
