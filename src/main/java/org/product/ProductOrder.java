@@ -4,7 +4,7 @@ public class ProductOrder extends Product{
     private int pcs;
 
     public ProductOrder(String kodeProduk, String namaProduk, int hargaProduk, int pcs) {
-        super(kodeProduk, namaProduk, hargaProduk);
+        super(kodeProduk, namaProduk, hargaProduk );
         this.pcs = pcs;
     }
 
@@ -12,7 +12,12 @@ public class ProductOrder extends Product{
         return pcs;
     }
 
-    public void setPcs(int pcs) {
+
+    // HargaProduk dalam bentuk total
+
+    // Overloading
+    public void setHargaProduk(int hargaProduk, int pcs) {
+        this.hargaProduk = hargaProduk * pcs;
         this.pcs = pcs;
     }
 }
