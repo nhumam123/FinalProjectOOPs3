@@ -3,6 +3,7 @@ package org.tablemodel;
 import org.product.ProductOrder;
 
 import javax.swing.table.AbstractTableModel;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class OrderViewTableModel extends AbstractTableModel {
@@ -19,6 +20,11 @@ public class OrderViewTableModel extends AbstractTableModel {
     public void addDataList(ProductOrder pd){
         productOrderList.add(pd);
         fireTableRowsInserted(productOrderList.size() - 1, productOrderList.size() - 1);
+    }
+
+    public void resetData() {
+        productOrderList.clear();
+        fireTableDataChanged();
     }
 
     @Override

@@ -12,7 +12,6 @@ import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -22,7 +21,7 @@ public class MenuUtamaEtoko extends JFrame {
     private JButton checkoutButton;
     private JScrollPane scrollPaneProductView;
     private JPanel panel;
-    private JButton scramble;
+    private JButton resetBtn;
     private JLabel imageView;
     private JLabel descView;
     private JLabel titleView;
@@ -41,7 +40,7 @@ public class MenuUtamaEtoko extends JFrame {
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
         final ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
         final HashMap<String, Integer> orderTablePcsMap = new HashMap<String,Integer>();
-        final ArrayList<ProductOrder> orderTableViewDataSource = new ArrayList<ProductOrder>()
+        final ArrayList<ProductOrder> orderTableViewDataSource = new ArrayList<ProductOrder>();
 
         // Kerangka tabel TokoDataModel
         tableProduk = new JTable(tokoDataModel);
@@ -95,12 +94,6 @@ public class MenuUtamaEtoko extends JFrame {
             }
         });
 
-        tableOrder.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
-            public void valueChanged(ListSelectionEvent event) {
-
-
-            }
-        });
         checkoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -108,10 +101,10 @@ public class MenuUtamaEtoko extends JFrame {
             }
         });
 
-        scramble.addActionListener(new ActionListener() {
+        resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                tableProduk.setValueAt(9999 , 1,1);
+                ((OrderViewTableModel) orderViewDataModel).resetData();
             }
         });
         tambahPesan.addActionListener(new ActionListener() {
@@ -170,15 +163,7 @@ public class MenuUtamaEtoko extends JFrame {
                 );
 
                 // Add Data in OrderTable
-                if (!orderTablePcsMap.containsKey(pd.getKodeProduk())) {
-                    orderTablePcsMap.put(pd.getKodeProduk(), pd.getPcs());
-                    ((OrderViewTableModel) orderViewDataModel).addDataList(pd);
-                } else {
-                    orderTablePcsMap.put(pd.getKodeProduk(), orderTablePcsMap.get(pd.getKodeProduk()) + pd.getPcs());
-
-                    pd.setHargaProduk(hargaPatokan, pcsBefore + pd.getPcs());
-                    orderTableMap.put(selectedProduct.getKodeProduk(), pd);
-                }
+                ((OrderViewTableModel) orderViewDataModel).addDataList(pd);
 
 
             }
