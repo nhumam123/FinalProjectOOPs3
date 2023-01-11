@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class TokoTableModel extends AbstractTableModel {
-    private final ArrayList<ProductView> productList;
+    private ArrayList<ProductView> productList;
     private final String[] columnNames = new String[] {
             "Kode Produk", "Nama Produk", "Harga Satuan", "Detail Produk (invisible)", "Img64 (invisible)"
     };
