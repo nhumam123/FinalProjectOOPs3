@@ -7,7 +7,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class OrderViewTableModel extends AbstractTableModel {
-    private final ArrayList<ProductOrder> productOrderList;
+    private ArrayList<ProductOrder> productOrderList;
 
     private final String[] columnNames = new String[] {
             "Kode Produk", "Nama Produk", "Pcs", "Total"
@@ -15,6 +15,12 @@ public class OrderViewTableModel extends AbstractTableModel {
 
     public OrderViewTableModel(ArrayList<ProductOrder> productOrderList) {
         this.productOrderList = productOrderList;
+    }
+
+    public void setProductOrderList(ArrayList<ProductOrder> productOrderList) {
+        this.productOrderList = productOrderList;
+        fireTableStructureChanged();
+        fireTableDataChanged();
     }
 
     public void addDataList(ProductOrder pd){

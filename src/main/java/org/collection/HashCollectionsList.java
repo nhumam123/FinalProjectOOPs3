@@ -1,37 +1,43 @@
 package org.collection;
+import java.util.Collection;
 import java.util.HashMap;
 
-public class HashCollectionsList<O>  {
-    private HashMap<String, O> Users;
+public class HashCollectionsList<O> extends HashMap {
+    private HashMap<String, O> dataHash;
 
     public HashCollectionsList() {
-        this.Users = new HashMap<String, O>();
+        this.dataHash = new HashMap<String, O>();
     }
 
-    public boolean exist(String userhash) {
-        return Users.containsKey(userhash);
+    @Override
+    public Collection values() {
+        return dataHash.values();
     }
 
-    public boolean addUser(String userhash, O user) {
-        if (!exist(userhash)) {
-            Users.put(userhash, user);
+    public boolean exist(String datahash) {
+        return dataHash.containsKey(datahash);
+    }
+
+    public boolean addData(String datahash, O data) {
+        if (!exist(datahash)) {
+            dataHash.put(datahash, data);
         } else {
             return false;
         }
         return true;
     }
-    public void  deleteUser(String userhash) {
-        Users.remove(userhash);
+    public void  deleteData(String datahash) {
+        dataHash.remove(datahash);
     }
 
-    public O getUser(String userhash) {
-        return Users.get(userhash);
+    public O getData(String datahash) {
+        return dataHash.get(datahash);
     }
-    public boolean updateUser(String userhash, O updatedUser) {
-        if (exist(userhash)) {
-            O temp = Users.get(userhash);
-            Users.remove(userhash);
-            Users.put(userhash, updatedUser);
+    public boolean updateData(String datahash, O updatedData) {
+        if (exist(datahash)) {
+            O temp = dataHash.get(datahash);
+            dataHash.remove(datahash);
+            dataHash.put(datahash, updatedData);
         } else {
             return false;
         }

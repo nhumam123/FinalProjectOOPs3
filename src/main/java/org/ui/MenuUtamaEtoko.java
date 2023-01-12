@@ -1,5 +1,6 @@
 package org.ui;
 
+import org.collection.HashCollectionsList;
 import org.product.ProductOrder;
 import org.product.ProductView;
 import org.tablemodel.OrderViewTableModel;
@@ -13,6 +14,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class MenuUtamaEtoko extends JFrame {
@@ -34,11 +36,14 @@ public class MenuUtamaEtoko extends JFrame {
     private JTable tableOrder;
     private JScrollPane scrollPaneOrderView;
 
+    private HashCollectionsList<ProductOrder> orderHashList;
+
     public MenuUtamaEtoko(ArrayList<ProductView> productList) {
         // Isi datamodel
         final TableModel tokoDataModel = new TokoTableModel(productList);
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
         final ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
+        orderHashList = new HashCollectionsList<>();
 
         // Kerangka tabel TokoDataModel
         tableProduk = new JTable(tokoDataModel);
@@ -148,20 +153,38 @@ public class MenuUtamaEtoko extends JFrame {
                 // Untuk menambahkan value ke checkout
 
                 // get Pcs
+                String getKodeProduk = selectedProduct.getKodeProduk();
                 int getPcs = Integer.parseInt(jmlPesanLabel.getText());
                 int hargaPatokan = Integer.parseInt(tableProduk.getValueAt(tableProduk.getSelectedRow(), 2).toString());
+                String getNamaProduk = selectedProduct.getNamaProduk();
+                selectedProduct.setHargaProduk(hargaPatokan, getPcs);
+                int hargaProdukTotal = selectedProduct.getHargaProduk();
+
 
                 selectedProduct.setHargaProduk(hargaPatokan,getPcs);
 
                 ProductOrder pd = new ProductOrder(
-                        selectedProduct.getKodeProduk(),
-                        selectedProduct.getNamaProduk(),
-                        selectedProduct.getHargaProduk(),
+                        getKodeProduk,
+                        getNamaProduk,
+                        hargaProdukTotal,
                         getPcs
                 );
 
+                // Add data to hashmap
+                if (!orderHashList.exist(getKodeProduk)){
+                    orderHashList.addData(getKodeProduk, pd );
+                } else {
+                    ProductOrder orderNew = orderHashList.getData(getKodeProduk);
+                    orderNew.setHargaProduk(hargaPatokan, getPcs);
+                    orderHashList.updateData(getKodeProduk, orderNew);
+                }
+
+                // Convert hashmap into arraylist
+                Collection<ProductOrder> OrderListCollection = orderHashList.values();
+                ArrayList<ProductOrder> OrderListArrayForm = new ArrayList<>(OrderListCollection);
+
                 // Add Data in OrderTable
-                ((OrderViewTableModel) orderViewDataModel).addDataList(pd);
+                ((OrderViewTableModel) orderViewDataModel).setProductOrderList(OrderListArrayForm);
 
 
             }
