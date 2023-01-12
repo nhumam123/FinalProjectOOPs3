@@ -13,6 +13,7 @@ import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -37,6 +38,9 @@ public class MenuUtamaEtoko extends JFrame {
     private JScrollPane scrollPaneOrderView;
 
     private HashCollectionsList<ProductOrder> orderHashList;
+
+    private ArrayList<ProductOrder> orderArrayListFinal;
+
 
     public MenuUtamaEtoko(ArrayList<ProductView> productList) {
         // Isi datamodel
@@ -107,6 +111,7 @@ public class MenuUtamaEtoko extends JFrame {
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                orderHashList.resetData();
                 ((OrderViewTableModel) orderViewDataModel).resetData();
             }
         });
@@ -180,11 +185,10 @@ public class MenuUtamaEtoko extends JFrame {
                 }
 
                 // Convert hashmap into arraylist
-                Collection<ProductOrder> OrderListCollection = orderHashList.values();
-                ArrayList<ProductOrder> OrderListArrayForm = new ArrayList<>(OrderListCollection);
+                orderArrayListFinal = orderHashList.convertToArrayList();
 
                 // Add Data in OrderTable
-                ((OrderViewTableModel) orderViewDataModel).setProductOrderList(OrderListArrayForm);
+                ((OrderViewTableModel) orderViewDataModel).setProductOrderList(orderArrayListFinal);
 
 
             }

@@ -1,8 +1,12 @@
 package org.collection;
+import org.product.ProductOrder;
+
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
 public class HashCollectionsList<O> extends HashMap {
+
     private HashMap<String, O> dataHash;
 
     public HashCollectionsList() {
@@ -42,6 +46,16 @@ public class HashCollectionsList<O> extends HashMap {
             return false;
         }
         return true;
+    }
+
+    public void resetData() {
+        dataHash.clear();
+    }
+
+    public ArrayList convertToArrayList() {
+        Collection<O> listCollection = dataHash.values();
+        ArrayList<O>  convertedArrayList = new ArrayList<>(listCollection);
+        return convertedArrayList;
     }
 
 }
