@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="hashmap">
+    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="Completing MenuUtamaEtoko using Hashmap as database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaTravel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +44,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "269",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "204",
     "last_opened_file_path": "C:/Users/naufa/OneDrive - Bina Nusantara/College/Ganjil 2022 (Sem 3)/Object Oriented Programming/TA/FinalProjectOOPs3/src/main/java/org/ui/backup",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -156,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673505486333</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Completing MenuUtamaEtoko using Hashmap as database">
+      <created>1673524664260</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673524664260</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,19 +201,20 @@
     <MESSAGE value="change private final arraylist TokoTableModel to private" />
     <MESSAGE value="HashCollectionsList" />
     <MESSAGE value="hashmap" />
-    <option name="LAST_COMMIT_MESSAGE" value="hashmap" />
+    <MESSAGE value="Completing MenuUtamaEtoko using Hashmap as database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completing MenuUtamaEtoko using Hashmap as database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java</url>
-          <line>89</line>
+          <line>94</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java</url>
-          <line>190</line>
+          <line>204</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

@@ -56,42 +56,6 @@ public class AdminMenu extends JFrame {
         tableProdukAdmin.removeColumn(tableProdukAdmin.getColumnModel().getColumn(3));
         tableProdukAdmin.removeColumn(tableProdukAdmin.getColumnModel().getColumn(3));
 
-        addProductBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Untuk menambahkan value ke checkout
 
-                // get Pcs
-                String getKodeProduk = selectedProduct.getKodeProduk();
-                int getPcs = Integer.parseInt(jmlPesanLabel.getText());
-                int hargaPatokan = Integer.parseInt(tableProduk.getValueAt(tableProduk.getSelectedRow(), 2).toString());
-                String getNamaProduk = selectedProduct.getNamaProduk();
-                selectedProduct.setHargaProduk(hargaPatokan, getPcs);
-                int hargaProdukTotal = selectedProduct.getHargaProduk();
-
-
-                selectedProduct.setHargaProduk(hargaPatokan,getPcs);
-
-                ProductOrder pd = new ProductOrder(
-                        getKodeProduk,
-                        getNamaProduk,
-                        hargaProdukTotal,
-                        getPcs
-                );
-
-                ProductView pdv = new ProductView(
-                        getKodeProduk,
-                        getNamaProduk,
-                        get
-                )
-
-                // Add data to hashmap
-                if (!orderHashList.exist(getKodeProduk)){
-                    orderHashList.addData(getKodeProduk, pd );
-                } else {
-                    ProductOrder orderNew = orderHashList.getData(getKodeProduk);
-                    orderNew.setHargaProduk(hargaPatokan, getPcs);
-                    orderHashList.updateData(getKodeProduk, orderNew);
-                }
     }
 }

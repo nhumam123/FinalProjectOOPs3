@@ -36,10 +36,13 @@ public class MenuUtamaEtoko extends JFrame {
     private JLabel hargaPesanLabel;
     private JTable tableOrder;
     private JScrollPane scrollPaneOrderView;
+    private JLabel totalPriceLabel;
+    private JLabel totalPcsLabel;
 
     private HashCollectionsList<ProductOrder> orderHashList;
-
     private ArrayList<ProductOrder> orderArrayListFinal;
+    private int totalPrice;
+    private int totalPcs;
 
 
     public MenuUtamaEtoko(ArrayList<ProductView> productList) {
@@ -48,6 +51,8 @@ public class MenuUtamaEtoko extends JFrame {
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
         final ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
         orderHashList = new HashCollectionsList<>();
+        totalPrice = 0;
+
 
         // Kerangka tabel TokoDataModel
         tableProduk = new JTable(tokoDataModel);
@@ -104,7 +109,8 @@ public class MenuUtamaEtoko extends JFrame {
         checkoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                String username = userBtn.getText();
+                CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(username, orderArrayListFinal);
             }
         });
 
@@ -113,6 +119,14 @@ public class MenuUtamaEtoko extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 orderHashList.resetData();
                 ((OrderViewTableModel) orderViewDataModel).resetData();
+
+                // Set label totalPrice to 0
+                totalPrice = 0;
+                totalPriceLabel.setText("0");
+
+                // Set pcs total to 0
+                totalPcs = 0;
+                totalPcsLabel.setText("0");
             }
         });
         tambahPesan.addActionListener(new ActionListener() {
@@ -189,6 +203,18 @@ public class MenuUtamaEtoko extends JFrame {
 
                 // Add Data in OrderTable
                 ((OrderViewTableModel) orderViewDataModel).setProductOrderList(orderArrayListFinal);
+
+                // Get total price & pcs label
+                totalPrice = 0;
+                totalPcs = 0;
+                int rows = orderArrayListFinal.size();
+                for (int i = 0; i < rows; i++) {
+                    totalPrice += orderArrayListFinal.get(i).getHargaProduk();
+                    totalPcs += orderArrayListFinal.get(i).getPcs();
+                    System.out.println(totalPrice);
+                }
+                totalPriceLabel.setText(String.valueOf(totalPrice));
+                totalPcsLabel.setText(String.valueOf(totalPcs));
 
 
             }

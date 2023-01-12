@@ -50,7 +50,7 @@ public class Main {
         // Umtuk test Menu Toko
         MenuUtamaEtoko menuToko = new MenuUtamaEtoko(arrpd);
         // Untuk test Menu Admin
-        AdminMenu adminMenu = new AdminMenu(arrpd);
+//        AdminMenu adminMenu = new AdminMenu(arrpd);
 
     }
 }
