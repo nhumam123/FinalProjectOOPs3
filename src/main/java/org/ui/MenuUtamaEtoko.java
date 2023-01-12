@@ -39,8 +39,6 @@ public class MenuUtamaEtoko extends JFrame {
         final TableModel tokoDataModel = new TokoTableModel(productList);
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
         final ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
-        final HashMap<String, Integer> orderTablePcsMap = new HashMap<String,Integer>();
-        final ArrayList<ProductOrder> orderTableViewDataSource = new ArrayList<ProductOrder>();
 
         // Kerangka tabel TokoDataModel
         tableProduk = new JTable(tokoDataModel);

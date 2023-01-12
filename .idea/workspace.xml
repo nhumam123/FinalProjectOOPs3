@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="V2">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_3_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_3_48_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_29_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="change private final arraylist TokoTableModel to private">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_29_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/coba/JtableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tablemodel/coba/JtableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +62,7 @@
       <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\product\backup" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.collection" />
       <recent name="org.ui.backup" />
     </key>
   </component>
@@ -134,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673340401835</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change private final arraylist TokoTableModel to private">
+      <created>1673397282859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673397282859</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,14 +174,15 @@
     <MESSAGE value="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko" />
     <MESSAGE value="Penambahan fungsi resetPesanBtn di GUI" />
     <MESSAGE value="V2" />
-    <option name="LAST_COMMIT_MESSAGE" value="V2" />
+    <MESSAGE value="change private final arraylist TokoTableModel to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="change private final arraylist TokoTableModel to private" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java</url>
-          <line>82</line>
+          <line>80</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

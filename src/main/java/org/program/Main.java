@@ -13,6 +13,9 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        // ArrayList untuk katalog ProductView
+        ArrayList<ProductView> arrpd = new ArrayList<>();
+
         Customer customerHumam = new Customer(
                 "humam",
                 "123",
@@ -35,7 +38,7 @@ public class Main {
 //        menuLogin.startMenuLogin();
 
         ProductView pd = new ProductView("ABS3", "Kokonut",15000, "Kokonut yang mantap");
-        ArrayList<ProductView> arrpd = new ArrayList<>();
+
         arrpd.add(pd);
         pd = new ProductView("AASD", "Chiki", 12000, "Chiki sedasp");
         arrpd.add(pd);
