@@ -1,6 +1,7 @@
 package org.program;
 
 import org.product.ProductView;
+import org.ui.AdminMenu;
 import org.ui.MenuLogin;
 import org.ui.MenuUtamaEtoko;
 import org.user.UserCollections;
@@ -44,7 +45,12 @@ public class Main {
         arrpd.add(pd);
         pd = new ProductView("DSF3", "Nutrijawa",21000, "Jamu yang berasal dari jawa"  );
         arrpd.add(pd);
+
+
+        // Umtuk test Menu Toko
         MenuUtamaEtoko menuToko = new MenuUtamaEtoko(arrpd);
+        // Untuk test Menu Admin
+        AdminMenu adminMenu = new AdminMenu(arrpd);
 
     }
 }
