@@ -22,6 +22,7 @@ public class Main {
         Customer customerHumam = new Customer(
                 "humam",
                 "123",
+                "Naufal Humam",
                 "naufal.pujianputra@binus.ac.id",
                 "6284525423",
                 "Jl. Araya no 1",
@@ -50,7 +51,7 @@ public class Main {
 
 
         // Umtuk test Menu Toko
-        MenuUtamaEtoko menuToko = new MenuUtamaEtoko(arrpd);
+        MenuUtamaEtoko menuToko = new MenuUtamaEtoko(customerHumam, arrpd);
         // Untuk test Menu Admin
 //        AdminMenu adminMenu = new AdminMenu(arrpd);
 

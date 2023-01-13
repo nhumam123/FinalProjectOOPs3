@@ -5,6 +5,7 @@ import org.product.ProductOrder;
 import org.product.ProductView;
 import org.tablemodel.OrderViewTableModel;
 import org.tablemodel.TokoTableModel;
+import org.user.type.Customer;
 
 import javax.swing.*;;
 import javax.swing.event.ListSelectionEvent;
@@ -45,7 +46,7 @@ public class MenuUtamaEtoko extends JFrame {
     private int totalPcs;
 
 
-    public MenuUtamaEtoko(ArrayList<ProductView> productList) {
+    public MenuUtamaEtoko(Customer userObj, ArrayList<ProductView> productList) {
         // Isi datamodel
         final TableModel tokoDataModel = new TokoTableModel(productList);
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
@@ -110,7 +111,7 @@ public class MenuUtamaEtoko extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = userBtn.getText();
-                CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(username, orderArrayListFinal);
+                CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(userObj ,orderArrayListFinal, Integer.parseInt(totalPriceLabel.getText()));
             }
         });
 

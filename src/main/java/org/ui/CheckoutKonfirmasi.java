@@ -2,6 +2,7 @@ package org.ui;
 
 import org.product.ProductOrder;
 import org.tablemodel.OrderViewTableModel;
+import org.user.type.Customer;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 
 public class CheckoutKonfirmasi extends JFrame {
     private JPanel panel1;
-    private JTextPane textPane2;
+    private JTextPane alamatPane;
     private JComboBox comboBox1;
     private JButton pesanButton;
     private JLabel userLabel;
@@ -21,8 +22,9 @@ public class CheckoutKonfirmasi extends JFrame {
 
     private int totalAmount;
 
-    public CheckoutKonfirmasi(String username, ArrayList<ProductOrder> productOrderArrayList) {
+    public CheckoutKonfirmasi(Customer userObj, ArrayList<ProductOrder> productOrderArrayList, int totalPrice) {
         final TableModel orderViewDataModel = new OrderViewTableModel(productOrderArrayList);
+
         orderTable = new JTable(orderViewDataModel);
         tOrderScrollPane.setViewportView(orderTable);
 
@@ -32,7 +34,12 @@ public class CheckoutKonfirmasi extends JFrame {
         setVisible(true);
 
 
-        userLabel.setText(username);
+        userLabel.setText(userObj.getUsername());
+        alamatPane.setText(userObj.getAddress());
+        totalLabel.setText(String.valueOf(totalPrice));
+
+
+
 
     }
 }
