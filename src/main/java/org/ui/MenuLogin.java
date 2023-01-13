@@ -3,13 +3,13 @@ package org.ui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 
 public class MenuLogin extends JFrame{
     private JPanel panelMain;
     private JTextField username;
-    private JButton btnClick;
+    private JButton loginBtn;
     private JPasswordField password;
+    private JButton createAccButton;
     private JButton btnExit;
 
     public MenuLogin()  {
@@ -20,7 +20,7 @@ public class MenuLogin extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        btnClick.addActionListener(new ActionListener() {
+        loginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -32,7 +32,7 @@ public class MenuLogin extends JFrame{
                 else
                     JOptionPane.showMessageDialog(null, "Username or Password mismatch ");
 
-                JOptionPane.showMessageDialog(btnClick, username.getText()+" Hello");
+                JOptionPane.showMessageDialog(loginBtn, username.getText()+" Hello");
             }
         });
     }

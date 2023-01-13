@@ -1,10 +1,8 @@
 package org.program;
 
+import org.collection.HashCollectionsList;
 import org.product.ProductView;
-import org.ui.AdminMenu;
-import org.ui.MenuLogin;
 import org.ui.MenuUtamaEtoko;
-import org.user.UserCollections;
 import org.user.type.Admin;
 import org.user.type.Customer;
 
@@ -14,6 +12,10 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        // Database
+        HashCollectionsList<Admin> adminUser = new HashCollectionsList<>();
+        HashCollectionsList<Customer> customerUser = new HashCollectionsList<>();
+
         // ArrayList untuk katalog ProductView
         ArrayList<ProductView> arrpd = new ArrayList<>();
 
@@ -27,10 +29,10 @@ public class Main {
                 "Malang");
 
         // test
-        UserCollections userCollections = new UserCollections<String>();
-        userCollections.addUser("humam", customerHumam);
-        System.out.println(userCollections.exist("humam"));
-        System.out.println(userCollections.exist("naufal"));
+        customerUser.addData("humam", customerHumam);
+        System.out.println(customerUser.exist("humam"));
+        System.out.println(customerUser.exist("naufal"));
+
 
         // Menu login
 //        MenuLogin menuLogin = new MenuLogin();
@@ -51,6 +53,8 @@ public class Main {
         MenuUtamaEtoko menuToko = new MenuUtamaEtoko(arrpd);
         // Untuk test Menu Admin
 //        AdminMenu adminMenu = new AdminMenu(arrpd);
+
+
 
     }
 }

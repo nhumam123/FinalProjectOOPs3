@@ -57,5 +57,6 @@ public class AdminMenu extends JFrame {
         tableProdukAdmin.removeColumn(tableProdukAdmin.getColumnModel().getColumn(3));
 
 
+
     }
 }
