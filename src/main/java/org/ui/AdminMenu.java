@@ -1,10 +1,14 @@
 package org.ui;
 
+import org.collection.HashCollectionsList;
 import org.product.ProductOrder;
 import org.product.ProductView;
+import org.tablemodel.OrderViewTableModel;
 import org.tablemodel.TokoTableModel;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,7 +25,12 @@ public class AdminMenu extends JFrame {
     private JTextField textField3;
     private JTextField textField4;
     private JScrollPane scrollPaneAdmin;
+    private JTextPane textPane1;
     private JTable tableUpdate;
+
+    private ArrayList<ProductView> productViews;
+    private HashCollectionsList<ProductView> productViewHashCollectionsList;
+
 
 
 
@@ -41,8 +50,12 @@ public class AdminMenu extends JFrame {
 //    }
 
 
-    public AdminMenu(ArrayList<ProductView> productList)  {
-        final TableModel tokoDataModel = new TokoTableModel(productList);
+    public AdminMenu(HashCollectionsList<ProductView> productHashList)  {
+        productViewHashCollectionsList = productHashList;
+        productViews = productHashList.convertToArrayList();
+        TableModel tokoDataModel = new TokoTableModel(productViews);
+
+
         // Kerangka tabel TokoDataModel
         tableProdukAdmin = new JTable(tokoDataModel);
         scrollPaneAdmin.setViewportView(tableProdukAdmin);
@@ -57,6 +70,66 @@ public class AdminMenu extends JFrame {
         tableProdukAdmin.removeColumn(tableProdukAdmin.getColumnModel().getColumn(3));
 
 
+        tableProdukAdmin.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
+            public void valueChanged(ListSelectionEvent event) {
+                // do some actions here, for example
+                // print first column value from selected row
+                //System.out.println(tableProduk.getValueAt(tableProduk.getSelectedRow(), 0).toString());
+                textField1.setText(tableProdukAdmin.getValueAt(tableProdukAdmin.getSelectedRow(), 1).toString());
+                textField2.setText(tableProdukAdmin.getValueAt(tableProdukAdmin.getSelectedRow(), 0).toString());
+                textField3.setText(tableProdukAdmin.getValueAt(tableProdukAdmin.getSelectedRow(), 2).toString());
+                textPane1.setText(tableProdukAdmin.getModel().getValueAt(tableProdukAdmin.getSelectedRow(),3).toString());
 
+//
+//
+//                // JmlPesanLabel
+//                jmlPesanLabel.setText("0");
+//                hargaPesanLabel.setText("0");
+//
+//
+//                //SetTitle
+//                titleView.setText(tableProduk.getValueAt(tableProduk.getSelectedRow(), 1).toString());
+//                descView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),3).toString());
+//                imageView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),4).toString());
+
+
+            }
+        });
+
+
+        AddDataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Get data from textfield
+                String namaProduk = textField1.getText();
+                String kodeProduk = textField2.getText();
+                int hargaProduk = Integer.parseInt(textField3.getText());
+                String deskripsiProduk = textPane1.getText();
+
+                // Pembuatan ProductView
+                ProductView pd = new ProductView(kodeProduk, namaProduk, hargaProduk, deskripsiProduk);
+
+                // Penyimpanan data ke hash dan array
+                productViewHashCollectionsList.deleteData(kodeProduk);
+                productViewHashCollectionsList.addData(kodeProduk, pd);
+                productViews = productViewHashCollectionsList.convertToArrayList();
+
+                // Update table
+                ((TokoTableModel) tokoDataModel).setProductList(productViews);
+
+            }
+        });
+        DeleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String kodeProduk = textField2.getText();
+                productViewHashCollectionsList.deleteData(kodeProduk);
+                productViews = productViewHashCollectionsList.convertToArrayList();
+
+                // Update table
+                ((TokoTableModel) tokoDataModel).setProductList(productViews);
+            }
+        });
     }
 }

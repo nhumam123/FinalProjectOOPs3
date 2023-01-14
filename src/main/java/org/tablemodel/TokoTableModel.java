@@ -59,4 +59,10 @@ public class TokoTableModel extends AbstractTableModel {
         }
         return null;
     }
+
+    public void setProductList(ArrayList<ProductView> productList) {
+        this.productList = productList;
+        fireTableStructureChanged();
+        fireTableDataChanged();
+    }
 }

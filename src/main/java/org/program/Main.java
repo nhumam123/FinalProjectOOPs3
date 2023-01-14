@@ -2,7 +2,9 @@ package org.program;
 
 import org.collection.HashCollectionsList;
 import org.product.ProductView;
+import org.ui.AdminMenu;
 import org.ui.MenuUtamaEtoko;
+import org.ui.NewAccountForm;
 import org.user.type.Admin;
 import org.user.type.Customer;
 
@@ -17,7 +19,7 @@ public class Main {
         HashCollectionsList<Customer> customerUser = new HashCollectionsList<>();
 
         // ArrayList untuk katalog ProductView
-        ArrayList<ProductView> arrpd = new ArrayList<>();
+        HashCollectionsList<ProductView> arrpd = new HashCollectionsList<>();
 
         Customer customerHumam = new Customer(
                 "humam",
@@ -43,19 +45,19 @@ public class Main {
 
         ProductView pd = new ProductView("ABS3", "Kokonut",15000, "Kokonut yang mantap");
 
-        arrpd.add(pd);
+        arrpd.addData(pd.getKodeProduk(), pd);
         pd = new ProductView("AASD", "Chiki", 12000, "Chiki sedasp");
-        arrpd.add(pd);
+        arrpd.addData(pd.getKodeProduk(), pd);
         pd = new ProductView("DSF3", "Nutrijawa",21000, "Jamu yang berasal dari jawa"  );
-        arrpd.add(pd);
+        arrpd.addData(pd.getKodeProduk(), pd);
 
 
         // Umtuk test Menu Toko
-        MenuUtamaEtoko menuToko = new MenuUtamaEtoko(customerHumam, arrpd);
+//        MenuUtamaEtoko menuToko = new MenuUtamaEtoko(customerHumam, arrpd);
         // Untuk test Menu Admin
 //        AdminMenu adminMenu = new AdminMenu(arrpd);
 
-
+        NewAccountForm newAccountForm = new NewAccountForm();
 
     }
 }
