@@ -50,7 +50,7 @@ public class NewAccountForm extends JFrame {
         });
     }
 
-    public void register() {
+    private void register() {
         this.username = usernameField.getText();
         this.fullname = fullnameField.getText();
         this.email = emailField.getText();

@@ -37,6 +37,7 @@ public class HashCollectionsList<O> extends HashMap {
     public O getData(String datahash) {
         return dataHash.get(datahash);
     }
+
     public boolean updateData(String datahash, O updatedData) {
         if (exist(datahash)) {
             O temp = dataHash.get(datahash);

@@ -1,20 +1,34 @@
 package org.ui;
 
+import org.collection.HashCollectionsList;
+import org.user.type.Admin;
+import org.user.type.Customer;
+import org.user.type.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuLogin extends JFrame{
     private JPanel panelMain;
-    private JTextField username;
     private JButton loginBtn;
-    private JPasswordField password;
-    private JButton createAccButton;
-    private JButton btnExit;
+    private JPasswordField passwordField;
+    private JTextField usernameField;
+    private JButton createAccBtn;
 
-    public MenuLogin()  {
+    private HashCollectionsList<Customer> customers;
+    private HashCollectionsList<Admin> admins;
+    private Object AccFound;
+    private int role;
+
+
+    public MenuLogin(HashCollectionsList<Customer> customerUsers, HashCollectionsList<Admin> adminUsers)  {
+        // database
+        this.customers = customerUsers;
+        this.admins = adminUsers;
+
         setContentPane(panelMain);
-        setTitle("Helloss");
+        setTitle("Login E-Toko");
         setBounds(600,200,200,200);
         //h.setSize(300,400);
         setVisible(true);
@@ -23,18 +37,49 @@ public class MenuLogin extends JFrame{
         loginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                String Username = username.getText();
-                String Password1 = String.valueOf(password.getPassword());
-
-                if (Username.equals("section.io") && Password1.equals("123"))
-                    JOptionPane.showMessageDialog(null, "Login Successful");
-                else
-                    JOptionPane.showMessageDialog(null, "Username or Password mismatch ");
-
-                JOptionPane.showMessageDialog(loginBtn, username.getText()+" Hello");
+                loginAccountBtn();
             }
         });
+    }
+
+    private void loginAccountBtn() {
+        String usernameText = usernameField.getText();
+        String password1Text = String.valueOf(passwordField.getPassword());
+
+        // Get either of account database from username
+        Admin adminAcc = admins.getData(usernameText);
+        Customer customerAcc = customers.getData(usernameText);
+        User finalAcc;
+        if (adminAcc != null){
+            // role 1 Admin
+            role = 1;
+            finalAcc = adminAcc;
+        } else if (customerAcc != null) {
+            // role 2 Customer
+            role = 2;
+            finalAcc = customerAcc;
+        } else {
+            // none account found
+            role = -1;
+            finalAcc = null;
+        }
+        checkUserPass(finalAcc);
+
+        JOptionPane.showMessageDialog(loginBtn, usernameField.getText()+" Hello");
+    }
+
+    private <O extends User> boolean checkUserPass(O objUser){
+        if (usernameField.equals(objUser.getUsername()) && passwordField.equals(objUser.getPassword())) {
+            JOptionPane.showMessageDialog(null, "Login Successful");
+            return true;
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Username or Password mismatch ");
+            return false;
+        }
+
+
+
     }
 
 //    public static void main(String[] args) {

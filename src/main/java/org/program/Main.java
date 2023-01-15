@@ -3,6 +3,7 @@ package org.program;
 import org.collection.HashCollectionsList;
 import org.product.ProductView;
 import org.ui.AdminMenu;
+import org.ui.MenuLogin;
 import org.ui.MenuUtamaEtoko;
 import org.ui.NewAccountForm;
 import org.user.type.Admin;
@@ -13,11 +14,10 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void  main(String[] args) throws IOException {
         // Database
-        HashCollectionsList<Admin> adminUser = new HashCollectionsList<>();
-        HashCollectionsList<Customer> customerUser = new HashCollectionsList<>();
-
+        HashCollectionsList<Admin> adminUsers = new HashCollectionsList<>();
+        HashCollectionsList<Customer> customerUsers = new HashCollectionsList<>();
         // ArrayList untuk katalog ProductView
         HashCollectionsList<ProductView> arrpd = new HashCollectionsList<>();
 
@@ -32,13 +32,13 @@ public class Main {
                 "Malang");
 
         // test
-        customerUser.addData("humam", customerHumam);
-        System.out.println(customerUser.exist("humam"));
-        System.out.println(customerUser.exist("naufal"));
+        customerUsers.addData("humam", customerHumam);
+        System.out.println(customerUsers.exist("humam"));
+        System.out.println(customerUsers.exist("naufal"));
 
 
         // Menu login
-//        MenuLogin menuLogin = new MenuLogin();
+        MenuLogin menuLogin = new MenuLogin(customerUsers, adminUsers);
         // Menu utama toko
 //        MenuUtamaEtoko menuToko = new MenuUtamaEtoko();
 //        menuLogin.startMenuLogin();
