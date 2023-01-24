@@ -1,5 +1,6 @@
 package org.ui;
 
+import org.collection.HashCollectionsList;
 import org.user.type.Customer;
 
 import javax.swing.*;
@@ -31,26 +32,34 @@ public class NewAccountForm extends JFrame {
     private String city;
     private char[] password;
 
+    private HashCollectionsList<Customer> customers;
     private Customer cust;
 
 
-    public NewAccountForm()  {
-//        String username, String password, String fullname,  String email, String phoneNumber, String address, String postalCode, String city
+    public NewAccountForm(HashCollectionsList<Customer> customers)  {
+        // Customer database
+        this.customers = customers;
+
         setContentPane(panel);
         setTitle("Registrasi");
         setBounds(600,200,400,450);
         //h.setSize(300,400);
-        setVisible(true);
+        setVisible(false);
 
         daftarBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                register();
+                if(register()){
+                    JOptionPane.showMessageDialog(panel, "akun " + cust.getUsername() + " telah dibuat!");
+                    setVisible(false);
+                }
+
             }
         });
+
     }
 
-    private void register() {
+    private boolean register() {
         this.username = usernameField.getText();
         this.fullname = fullnameField.getText();
         this.email = emailField.getText();
@@ -61,7 +70,7 @@ public class NewAccountForm extends JFrame {
 
         this.password = validateSamePassword();
 
-        if (checkFilledFieldMessage() && this.password.length != 0) {
+        if (checkFilledFieldMessage() && this.password.length != 0 && usernameNotExist()) {
             this.cust = new Customer(
                     this.username,
                     String.valueOf(this.password),
@@ -72,22 +81,24 @@ public class NewAccountForm extends JFrame {
                     this.postalCode,
                     this.city
             );
-
+            customers.addData(cust.getUsername(), cust);
+            return true;
         }
+        return false;
     }
 
-    public Customer returnCustomerObj (){
-        return this.cust;
+    public HashCollectionsList<Customer> returnCustomers(){
+        return this.customers;
     }
 
     public char[] validateSamePassword() {
         if (passwordField1.getPassword().length == 0 || passwordField2.getPassword().length == 0){
-            JOptionPane.showMessageDialog(daftarBtn, "Password harus diisi!");
+            JOptionPane.showMessageDialog(panel, "Password harus diisi!");
         }
         if (Arrays.equals(passwordField1.getPassword(), passwordField2.getPassword()) ) {
             return passwordField1.getPassword();
         } else {
-            JOptionPane.showMessageDialog(daftarBtn, "Password tidak sama!");
+            JOptionPane.showMessageDialog(panel, "Password tidak sama!");
             return null;
         }
     }
@@ -102,10 +113,20 @@ public class NewAccountForm extends JFrame {
         postalCodeField.getText().length() == 0  ||
         cityField.getText().length() == 0
         ) {
-            JOptionPane.showMessageDialog(daftarBtn, "Isi semua field!");
+            JOptionPane.showMessageDialog(panel, "Isi semua field!");
             return false;
         }
         return true;
     }
+
+    private boolean usernameNotExist() {
+        if (!customers.exist(this.username)) {
+            return true;
+        }
+        JOptionPane.showMessageDialog(panel, "Username sudah ada!");
+        return false;
+    }
+
+
 
 }

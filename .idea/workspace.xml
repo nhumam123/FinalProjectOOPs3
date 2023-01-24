@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="NewAccountForm">
+    <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="loginForm add feature">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ui/AddProductMenu.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ui/AddProductMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_3_48_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_3_48_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_Jan_09,2023_16_04_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_Jan_09_2023_16_04__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_Jan_10,2023_15_07_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_Jan_10_2023_15_07__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,27 +43,40 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2JcEMkwDQwfn6YvL6hQNhV8V3vP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "204",
-    "last_opened_file_path": "C:/Users/naufa/OneDrive - Bina Nusantara/College/Ganjil 2022 (Sem 3)/Object Oriented Programming/TA/FinalProjectOOPs3/src/main/java/org/ui/backup",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;204&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/naufa/OneDrive - Bina Nusantara/College/Ganjil 2022 (Sem 3)/Object Oriented Programming/TA/FinalProjectOOPs3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\ui\backup" />
@@ -109,6 +134,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672368928920</updated>
+      <workItem from="1674005900876" duration="12225000" />
+      <workItem from="1674113977868" duration="5895000" />
+      <workItem from="1674520974963" duration="7000000" />
     </task>
     <task id="LOCAL-00001" summary="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko">
       <created>1673272059335</created>
@@ -194,8 +222,18 @@
       <option name="project" value="LOCAL" />
       <updated>1673655614997</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="loginForm add feature">
+      <created>1673824806717</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673824806718</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -231,148 +269,152 @@
     <MESSAGE value="CheckoutKonfirmasi" />
     <MESSAGE value="Penyelesaian CheckoutKonfirmasi" />
     <MESSAGE value="NewAccountForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="NewAccountForm" />
+    <MESSAGE value="loginForm add feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="loginForm add feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuUtamaEtoko.java</url>
-          <line>205</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java</url>
+          <line>191</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.java</url>
-          <line>61</line>
+          <line>70</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/NewAccountForm.java</url>
-          <line>64</line>
+          <line>73</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>65</line>
+          <line>98</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>64</line>
+          <line>97</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>63</line>
+          <line>96</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>61</line>
+          <line>94</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>60</line>
+          <line>93</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>62</line>
+          <line>95</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>59</line>
+          <line>92</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>58</line>
+          <line>91</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>57</line>
+          <line>90</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>56</line>
+          <line>89</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>52</line>
+          <line>85</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>53</line>
+          <line>86</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>54</line>
+          <line>87</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>55</line>
+          <line>88</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>51</line>
+          <line>84</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>71</line>
+          <line>111</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>72</line>
+          <line>112</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>73</line>
+          <line>113</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>74</line>
+          <line>114</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>75</line>
+          <line>115</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>76</line>
+          <line>116</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>77</line>
+          <line>117</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="cust" language="JAVA" />
         <watch expression="customers" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

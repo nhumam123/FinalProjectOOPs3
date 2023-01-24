@@ -14,12 +14,9 @@ import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 
-public class MenuUtamaEtoko extends JFrame {
+public class CustomerMenu extends JFrame {
     private JButton userBtn;
     private JTable tableProduk;
     private JButton checkoutButton;
@@ -45,12 +42,14 @@ public class MenuUtamaEtoko extends JFrame {
     private int totalPrice;
     private int totalPcs;
 
+    private ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
 
-    public MenuUtamaEtoko(Customer userObj, ArrayList<ProductView> productList) {
+    public CustomerMenu(Customer userObj, ArrayList<ProductView> productList) {
         // Isi datamodel
         final TableModel tokoDataModel = new TokoTableModel(productList);
         final TableModel orderViewDataModel = new OrderViewTableModel(new ArrayList<ProductOrder>());
-        final ProductOrder selectedProduct = new ProductOrder(null,null,-1, -1);
+        selectedProduct = new ProductOrder(null,null,-1, -1);
+
         orderHashList = new HashCollectionsList<>();
         totalPrice = 0;
 
@@ -87,37 +86,21 @@ public class MenuUtamaEtoko extends JFrame {
         tableProduk.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
             public void valueChanged(ListSelectionEvent event) {
                 // do some actions here, for example
-                // print first column value from selected row
-                //System.out.println(tableProduk.getValueAt(tableProduk.getSelectedRow(), 0).toString());
-                selectedProduct.setKodeProduk(tableProduk.getValueAt(tableProduk.getSelectedRow(), 0).toString());
-                selectedProduct.setNamaProduk(tableProduk.getValueAt(tableProduk.getSelectedRow(), 1).toString());
-                selectedProduct.setHargaProduk(Integer.parseInt(tableProduk.getValueAt(tableProduk.getSelectedRow(), 2).toString()));
-
-
-                // JmlPesanLabel
-                jmlPesanLabel.setText("0");
-                hargaPesanLabel.setText("0");
-
-
-                //SetTitle
-                titleView.setText(tableProduk.getValueAt(tableProduk.getSelectedRow(), 1).toString());
-                descView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),3).toString());
-                imageView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),4).toString());
-
+                getSelectedRow();
             }
         });
 
         checkoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String username = userBtn.getText();
-                CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(userObj ,orderArrayListFinal, Integer.parseInt(totalPriceLabel.getText()));
+                checkoutClick(userObj);
             }
         });
 
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                resetCheckoutClick();
                 orderHashList.resetData();
                 ((OrderViewTableModel) orderViewDataModel).resetData();
 
@@ -220,6 +203,35 @@ public class MenuUtamaEtoko extends JFrame {
 
             }
         });
+
+    }
+
+    private void getSelectedRow() {
+        // print first column value from selected row
+        //System.out.println(tableProduk.getValueAt(tableProduk.getSelectedRow(), 0).toString());
+        selectedProduct.setKodeProduk(tableProduk.getValueAt(tableProduk.getSelectedRow(), 0).toString());
+        selectedProduct.setNamaProduk(tableProduk.getValueAt(tableProduk.getSelectedRow(), 1).toString());
+        selectedProduct.setHargaProduk(Integer.parseInt(tableProduk.getValueAt(tableProduk.getSelectedRow(), 2).toString()));
+
+
+        // JmlPesanLabel
+        jmlPesanLabel.setText("0");
+        hargaPesanLabel.setText("0");
+
+
+        //SetTitle
+        titleView.setText(tableProduk.getValueAt(tableProduk.getSelectedRow(), 1).toString());
+        descView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),3).toString());
+        imageView.setText(tableProduk.getModel().getValueAt(tableProduk.getSelectedRow(),4).toString());
+
+    }
+
+    private void checkoutClick(Customer userObj) {
+        String username = userBtn.getText();
+        CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(userObj ,orderArrayListFinal, Integer.parseInt(totalPriceLabel.getText()));
+    }
+
+    private void resetCheckoutClick() {
 
     }
 }

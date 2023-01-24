@@ -3,12 +3,13 @@ package org.ui;
 import org.product.ProductOrder;
 import org.tablemodel.OrderViewTableModel;
 import org.user.type.Customer;
+import org.user.type.User;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
 import java.util.ArrayList;
 
-public class CheckoutKonfirmasi extends JFrame {
+public class CheckoutKonfirmasi<O extends Customer> extends JFrame {
     private JPanel panel1;
     private JTextPane alamatPane;
     private JComboBox comboBox1;

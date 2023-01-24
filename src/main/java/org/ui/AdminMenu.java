@@ -1,9 +1,7 @@
 package org.ui;
 
 import org.collection.HashCollectionsList;
-import org.product.ProductOrder;
 import org.product.ProductView;
-import org.tablemodel.OrderViewTableModel;
 import org.tablemodel.TokoTableModel;
 
 import javax.swing.*;
@@ -16,7 +14,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class AdminMenu extends JFrame {
-    private JButton AddDataButton;
+    private JButton editDataBtn;
     private JPanel panel1;
     private JButton DeleteButton;
     private JTextField textField1;
@@ -26,6 +24,7 @@ public class AdminMenu extends JFrame {
     private JTextField textField4;
     private JScrollPane scrollPaneAdmin;
     private JTextPane textPane1;
+    private JButton addDataButton;
     private JTable tableUpdate;
 
     private ArrayList<ProductView> productViews;
@@ -97,7 +96,7 @@ public class AdminMenu extends JFrame {
         });
 
 
-        AddDataButton.addActionListener(new ActionListener() {
+        editDataBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -123,13 +122,25 @@ public class AdminMenu extends JFrame {
         DeleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String kodeProduk = textField2.getText();
-                productViewHashCollectionsList.deleteData(kodeProduk);
-                productViews = productViewHashCollectionsList.convertToArrayList();
-
-                // Update table
-                ((TokoTableModel) tokoDataModel).setProductList(productViews);
+                if (deleteConfirmation(panel1)) {
+                    String kodeProduk = textField2.getText();
+                    productViewHashCollectionsList.deleteData(kodeProduk);
+                    productViews = productViewHashCollectionsList.convertToArrayList();
+                    // Update table
+                    ((TokoTableModel) tokoDataModel).setProductList(productViews);
+                }
             }
         });
     }
+
+
+    public boolean deleteConfirmation(Component parentComponent) {
+        int confirm = JOptionPane.showConfirmDialog(parentComponent, "Apakah anda yakin untuk menghapus item ini?", "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
+        if (confirm == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(parentComponent, "Item deleted.");
+            return true;
+        }
+        return false;
+    }
+
 }
