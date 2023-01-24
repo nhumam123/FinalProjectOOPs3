@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/Checkout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tablemodel/TokoTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/utility/Base64Conversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/uml.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/uml.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +122,7 @@
       <workItem from="1674005900876" duration="12225000" />
       <workItem from="1674113977868" duration="5895000" />
       <workItem from="1674520974963" duration="7741000" />
-      <workItem from="1674541198095" duration="16869000" />
+      <workItem from="1674541198095" duration="18914000" />
     </task>
     <task id="LOCAL-00001" summary="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko">
       <created>1673272059335</created>
@@ -230,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674540471242</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="akhir 2">
+      <created>1674558529703</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674558529703</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +271,8 @@
     <MESSAGE value="NewAccountForm" />
     <MESSAGE value="loginForm add feature" />
     <MESSAGE value="akhir" />
-    <option name="LAST_COMMIT_MESSAGE" value="akhir" />
+    <MESSAGE value="akhir 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="akhir 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

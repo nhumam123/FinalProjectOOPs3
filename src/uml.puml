@@ -7,7 +7,6 @@ abstract User {
     #email: String
     #phoneNumber: String
     ~User()
-
 }
 
 class Admin{
@@ -23,7 +22,7 @@ class Customer{
 
 }
 
-class Usercollections<O> {
+class S<O> {
     -Users: Hashmap<String, O>
     +UserCollections()
     +exist(String userhash)
