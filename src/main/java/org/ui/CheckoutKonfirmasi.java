@@ -7,6 +7,8 @@ import org.user.type.User;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class CheckoutKonfirmasi<O extends Customer> extends JFrame {
@@ -18,10 +20,7 @@ public class CheckoutKonfirmasi<O extends Customer> extends JFrame {
     private JTable orderTable;
     private JScrollPane tOrderScrollPane;
     private JLabel totalLabel;
-    private JTextField pesananTextField;
 
-
-    private int totalAmount;
 
     public CheckoutKonfirmasi(Customer userObj, ArrayList<ProductOrder> productOrderArrayList, int totalPrice) {
         final TableModel orderViewDataModel = new OrderViewTableModel(productOrderArrayList);
@@ -40,7 +39,12 @@ public class CheckoutKonfirmasi<O extends Customer> extends JFrame {
         totalLabel.setText(String.valueOf(totalPrice));
 
 
-
-
+        pesanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(panel1, "Pembelian berhasil!");
+                panel1.setEnabled(false);
+            }
+        });
     }
 }
