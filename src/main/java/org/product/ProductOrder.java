@@ -12,10 +12,6 @@ public class ProductOrder extends Product{
         return pcs;
     }
 
-
-    // HargaProduk dalam bentuk total
-
-    // Overloading
     public void setHargaProduk(int hargaProduk, int pcs) {
         this.hargaProduk = hargaProduk * pcs;
         this.pcs = pcs;
