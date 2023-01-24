@@ -53,6 +53,7 @@ public class CustomerMenu extends JFrame {
         orderHashList = new HashCollectionsList<>();
         totalPrice = 0;
 
+        userBtn.setText(userObj.getUsername());
 
         // Kerangka tabel TokoDataModel
         tableProduk = new JTable(tokoDataModel);
@@ -70,17 +71,11 @@ public class CustomerMenu extends JFrame {
         scrollPaneOrderView.setViewportView(tableOrder);
         tableOrder.setPreferredScrollableViewportSize(new Dimension(300, 100));
         setContentPane(panel);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
 
-        userBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
         tableProduk.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
             public void valueChanged(ListSelectionEvent event) {
                 // do some actions here, for example
@@ -98,7 +93,6 @@ public class CustomerMenu extends JFrame {
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                resetCheckoutClick();
                 orderHashList.resetData();
                 ((OrderViewTableModel) orderViewDataModel).resetData();
 
@@ -229,7 +223,4 @@ public class CustomerMenu extends JFrame {
         CheckoutKonfirmasi checkoutKonfirmasi = new CheckoutKonfirmasi(userObj ,orderArrayListFinal, Integer.parseInt(totalPriceLabel.getText()));
     }
 
-    private void resetCheckoutClick() {
-
-    }
 }

@@ -46,7 +46,6 @@ public class MenuLogin extends JFrame{
         setLocationRelativeTo(null);
         //h.setSize(300,400);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         loginBtn.addActionListener(new ActionListener() {
             @Override

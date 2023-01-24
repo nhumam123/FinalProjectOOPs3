@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CheckoutKonfirmasi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AddProductMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/AddProductMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AddProductMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/backup/AddProductMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +127,7 @@
       <workItem from="1674005900876" duration="12225000" />
       <workItem from="1674113977868" duration="5895000" />
       <workItem from="1674520974963" duration="7741000" />
-      <workItem from="1674541198095" duration="19554000" />
+      <workItem from="1674541198095" duration="21672000" />
     </task>
     <task id="LOCAL-00001" summary="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko">
       <created>1673272059335</created>
@@ -235,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674564828944</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="akhir 2">
+      <created>1674565385510</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674565385510</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +298,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java</url>
-          <line>189</line>
+          <line>183</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -300,7 +313,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/MenuLogin.java</url>
-          <line>68</line>
+          <line>67</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
