@@ -13,7 +13,7 @@ import java.util.Objects;
 public class TokoTableModel extends AbstractTableModel {
     private ArrayList<ProductView> productList;
     private final String[] columnNames = new String[] {
-            "Kode Produk", "Nama Produk", "Harga Satuan", "Detail Produk (invisible)", "Img64 (invisible)"
+            "Kode Produk", "Nama Produk", "Harga Satuan", "Detail Produk"
     };
 //    private final Class[] columnClass = new Class[] {
 //            String.class, String.class, String.class, Integer.class, Objects.class, Integer.class
@@ -39,7 +39,7 @@ public class TokoTableModel extends AbstractTableModel {
     }
 
     public int getRowCount() {
-        return productList.size();
+        return productList.size() ;
     }
 
 
@@ -54,8 +54,6 @@ public class TokoTableModel extends AbstractTableModel {
                 return row.getHargaProduk();
             case 3:
                 return row.getDeskripsiProduk();
-            case 4:
-                return row.getImageProduk64();
         }
         return null;
     }

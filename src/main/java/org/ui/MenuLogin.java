@@ -10,7 +10,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class MenuLogin extends JFrame{
     private JPanel panelMain;
@@ -19,6 +18,7 @@ public class MenuLogin extends JFrame{
     private JTextField usernameField;
     private JButton createAccBtn;
     private JButton refreshBtn;
+    private JButton refreshProductButton;
 
     private HashCollectionsList<Customer> customers;
     private HashCollectionsList<Admin> admins;
@@ -34,13 +34,16 @@ public class MenuLogin extends JFrame{
         this.admins = adminUsers;
         this.productViews = productViews;
         NewAccountForm newAccountForm = new NewAccountForm(customers);
+        AdminMenu adminMenu = new AdminMenu(productViews);
 
         // Refreshbtn false
         refreshBtn.setVisible(false);
+        refreshProductButton.setVisible(false);
 
         setContentPane(panelMain);
         setTitle("Login E-Toko");
-        setBounds(600,200,200,200);
+        setSize(400,300);
+        setLocationRelativeTo(null);
         //h.setSize(300,400);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,9 +52,9 @@ public class MenuLogin extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (loginAccountBtn()) {
-                    setVisible(false);
+                    setVisible(true);
                     if (role == 1) {
-                        AdminMenu adminMenu = new AdminMenu(productViews);
+                        adminMenu.setVisible(true);
                     } else if (role == 2) {
                         CustomerMenu menuUtamaEtoko = new CustomerMenu(
                                 customerUsers.getData(accFoundUsername),
@@ -64,6 +67,7 @@ public class MenuLogin extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 newAccountForm.setVisible(true);
+                newAccountForm.setLocationRelativeTo(null);
                 refreshBtn.setVisible(true);
             }
         });
@@ -72,6 +76,13 @@ public class MenuLogin extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 setCustomers(newAccountForm.returnCustomers());
                 refreshBtn.setVisible(false);
+            }
+        });
+        refreshProductButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setProductViews(adminMenu.returnProductView());
+                refreshProductButton.setVisible(false);
             }
         });
     }
@@ -100,7 +111,7 @@ public class MenuLogin extends JFrame{
 
         if (objUser != null) {
             this.accFoundUsername = objUser.getUsername();
-            JOptionPane.showMessageDialog(loginBtn, usernameField.getText()+" Hello");
+            JOptionPane.showMessageDialog(panelMain, usernameField.getText()+" Hello");
             return true;
         }
         return false;
@@ -129,5 +140,9 @@ public class MenuLogin extends JFrame{
 
     public void setCustomers(HashCollectionsList<Customer> newCustomer) {
         this.customers = newCustomer;
+    }
+
+    public void setProductViews(HashCollectionsList<ProductView> productViews) {
+        this.productViews = productViews;
     }
 }

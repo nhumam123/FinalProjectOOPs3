@@ -59,12 +59,10 @@ public class CustomerMenu extends JFrame {
         scrollPaneProductView.setViewportView(tableProduk);
         tableProduk.setPreferredScrollableViewportSize(new Dimension(300, 100));
         setContentPane(panel);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
         // Set invisible row Detail dan img64
-        tableProduk.removeColumn(tableProduk.getColumnModel().getColumn(3));
         tableProduk.removeColumn(tableProduk.getColumnModel().getColumn(3));
 
         //Kerangka tabel orderViewDataModel

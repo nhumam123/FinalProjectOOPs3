@@ -12,7 +12,6 @@ public class ProductView extends Product{
     public ProductView(String kodeProduk, String namaProduk, int hargaProduk, String deskripsiProduk) {
         super(kodeProduk, namaProduk, hargaProduk);
         this.deskripsiProduk = deskripsiProduk;
-        this.imageProduk64 = null;
     }
 
     public String getDeskripsiProduk() {
