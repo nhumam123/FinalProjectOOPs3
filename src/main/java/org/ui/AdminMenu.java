@@ -44,7 +44,7 @@ public class AdminMenu extends JFrame {
         productViewHashCollectionsList = productHashList;
         productViewsList = productHashList.convertToArrayList();
         this.tokoDataModel = new TokoTableModel(productViewsList);
-
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(false);
 
         // Kerangka tabel TokoDataModel
@@ -54,9 +54,11 @@ public class AdminMenu extends JFrame {
         setContentPane(panel1);
         pack();
         setLocationRelativeTo(null);
+        setTitle("E-Toko Admin Menu");
 
         // Set invisible button confirm
         addDataBtn2.setVisible(false);
+
 
 
         tableProdukAdmin.getSelectionModel().addListSelectionListener(new ListSelectionListener(){

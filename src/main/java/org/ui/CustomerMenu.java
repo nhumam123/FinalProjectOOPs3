@@ -53,6 +53,8 @@ public class CustomerMenu extends JFrame {
         orderHashList = new HashCollectionsList<>();
         totalPrice = 0;
 
+        setTitle("Belanja E-Toko");
+
         userBtn.setText(userObj.getUsername());
 
         // Kerangka tabel TokoDataModel

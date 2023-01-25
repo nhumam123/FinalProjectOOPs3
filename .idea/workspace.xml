@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uml.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/uml.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,28 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;120&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;204&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/naufa/OneDrive - Bina Nusantara/College/Ganjil 2022 (Sem 3)/Object Oriented Programming/TA/FinalProjectOOPs3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "120",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "204",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\naufa\OneDrive - Bina Nusantara\College\Ganjil 2022 (Sem 3)\Object Oriented Programming\TA\FinalProjectOOPs3\src\main\java\org\ui\backup" />
@@ -127,7 +125,7 @@
       <workItem from="1674113977868" duration="5895000" />
       <workItem from="1674520974963" duration="7741000" />
       <workItem from="1674541198095" duration="23286000" />
-      <workItem from="1674613077529" duration="12394000" />
+      <workItem from="1674613077529" duration="20436000" />
     </task>
     <task id="LOCAL-00001" summary="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko">
       <created>1673272059335</created>
@@ -276,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674625205876</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="akhir 4">
+      <created>1674628208015</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674628208015</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +333,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/CustomerMenu.java</url>
-          <line>183</line>
+          <line>185</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -348,32 +353,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>146</line>
+          <line>148</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>144</line>
+          <line>146</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>143</line>
+          <line>145</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>127</line>
+          <line>129</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>128</line>
+          <line>130</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ui/AdminMenu.java</url>
-          <line>136</line>
+          <line>138</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

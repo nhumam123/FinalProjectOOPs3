@@ -2,7 +2,7 @@
 skinparam classAttributeIconSize 0
 class Admin{
     -role: String
-    +Admin(String username, String password, String fullname, String email, String phoneNumber, String role)
+    +Admin()
     +String getRole()
     +void setRole(String role)
 }
@@ -11,7 +11,7 @@ class Customer{
     -address: String
     -postalCode: String
     -city: String
-    ~Customer(String username, String password, String fullname, String email, String phoneNumber, String address, String postalCode, String city)
+    ~Customer()
     +String getAddress()
     +void setAddress(String address)
     +String getPostalCode()
@@ -26,14 +26,14 @@ abstract User {
     #fullname: String
     #email: String
     #phoneNumber: String
-    ~User(String username, String password, String fullname, String email, String phoneNumber)
+    ~User()
     +String getUsername()
     +String getFullname()
     +String getEmail()
     +String getPhoneNumber()
-    +void {abstract} setUsername(String username)
+    +void setUsername(String username)
     +String getPassword()
-    +void {abstract} setPassword(String password)
+    +void setPassword(String password)
     +void setFullname(String fullname)
     +void setEmail(String email)
     +void setPhoneNumber(String phoneNumber)
@@ -48,7 +48,7 @@ abstract Product {
     #kodeProduk: String;
     #namaProduk: String;
     #hargaProduk: int;
-    +Product(String kodeProduk, String namaProduk, int hargaProduk)
+    +Product()
     +String getKodeProduk()
     +void setKodeProduk(String kodeProduk)
     +String getNamaProduk()
@@ -59,7 +59,7 @@ abstract Product {
 
 class ProductOrder {
     -pcs: int
-    +ProductOrder(String kodeProduk, String namaProduk, int hargaProduk, int pcs)
+    +ProductOrder()
     +int getPcs()
     +void setPcs(int pcs)
     +void setHargaProduk(int hargaProduk, int pcs)
@@ -68,7 +68,7 @@ class ProductOrder {
 
 class ProductView {
 -deskripsiProduk: String
-+ProductView(String kodeProduk, String namaProduk, int hargaProduk, String deskripsiProduk)
++ProductView()
 +String getDeskripsiProduk()
 +void setDeskripsiProduk(String deskripsiProduk)
 }

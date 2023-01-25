@@ -30,9 +30,9 @@ public class Main {
 
         // Initialize customer
         Customer customer1 = new Customer(
-                "humam",
+                "pelanggan123",
                 "123",
-                "Naufal Humam",
+                "Naufal Humam R.P",
                 "naufal.pujianputra@binus.ac.id",
                 "6284525423",
                 "Jl. Araya no 1",
@@ -56,38 +56,7 @@ public class Main {
         // Menu login
         MenuLogin menuLogin = new MenuLogin(customerUsers, adminUsers, hashMapProductViews);
         String usernameAcc = menuLogin.getAccFoundUsername();
-        int role = menuLogin.getRoleAcc();
 
-
-        if (usernameAcc != null) {
-            // ADMIN
-            if (role == 1){
-                AdminMenu adminMenu = new AdminMenu(hashMapProductViews);
-            }
-            // CUSTOMER
-            if (role == 2) {
-//                CustomerMenu customerMenu = new CustomerMenu(
-//                        customerUsers.getData().getUsername()
-//                )
-            }
         }
 
-
-
-        // Menu utama toko
-//        MenuUtamaEtoko menuToko = new MenuUtamaEtoko();
-
-
-
-
-        // Umtuk test Menu Toko
-
-//        MenuUtamaEtoko menuToko = new MenuUtamaEtoko(customerHumam, hashMapProductViews.convertToArrayList()
-//        );
-        // Untuk test Menu Admin
-//        AdminMenu adminMenu = new AdminMenu(hashMapProductViews);
-
-//        NewAccountForm newAccountForm = new NewAccountForm();
-
-    }
 }
