@@ -1,14 +1,6 @@
 
 @startuml
 skinparam classAttributeIconSize 0
-abstract User {
-    #username: String
-    #password: String
-    #email: String
-    #phoneNumber: String
-    ~User()
-}
-
 class Admin{
     -role: String
     ~Admin()
@@ -19,12 +11,26 @@ class Customer{
     -postalCode: String
     -city: String
     ~Customer()
-
+    +getAddress()
 }
 
-class S<O> {
-    -Users: Hashmap<String, O>
-    +UserCollections()
+abstract User {
+    #username: String
+    #password: String
+    #fullname: String
+    #email: String
+    #phoneNumber: String
+    ~User()
+    +getUsername()
+    +getPassword()
+}
+
+
+
+
+class HashCollectionList<0> {
+    -dataHash: Hashmap<String, O>
+    +HashCollectionList()
     +exist(String userhash)
     +addUser(String userhash, O user)
     +deleteUser(String userhash)
@@ -35,6 +41,6 @@ class S<O> {
 
 User <|-- Admin
 User <|-- Customer
-Usercollections *-- Admin
-Usercollections *-- Customer
+HashCollectionList *-- Admin
+HashCollectionList *-- Customer
 @enduml
