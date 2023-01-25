@@ -30,7 +30,7 @@ public class HashCollectionsList<O> extends HashMap {
         }
         return true;
     }
-    public void  deleteData(String datahash) {
+    public void deleteData(String datahash) {
         dataHash.remove(datahash);
     }
 

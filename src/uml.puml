@@ -2,15 +2,22 @@
 skinparam classAttributeIconSize 0
 class Admin{
     -role: String
-    ~Admin()
+    +Admin(String username, String password, String fullname, String email, String phoneNumber, String role)
+    +String getRole()
+    +void setRole(String role)
 }
 
 class Customer{
     -address: String
     -postalCode: String
     -city: String
-    ~Customer()
-    +getAddress()
+    ~Customer(String username, String password, String fullname, String email, String phoneNumber, String address, String postalCode, String city)
+    +String getAddress()
+    +void setAddress(String address)
+    +String getPostalCode()
+    +void setPostalCode(String postalCode)
+    +String getCity()
+    +void setCity(String city)
 }
 
 abstract User {
@@ -19,27 +26,80 @@ abstract User {
     #fullname: String
     #email: String
     #phoneNumber: String
-    ~User()
-    +getUsername()
-    +getPassword()
+    ~User(String username, String password, String fullname, String email, String phoneNumber)
+    +String getUsername()
+    +String getFullname()
+    +String getEmail()
+    +String getPhoneNumber()
+    +void {abstract} setUsername(String username)
+    +String getPassword()
+    +void {abstract} setPassword(String password)
+    +void setFullname(String fullname)
+    +void setEmail(String email)
+    +void setPhoneNumber(String phoneNumber)
 }
 
 
 
 
-class HashCollectionList<0> {
-    -dataHash: Hashmap<String, O>
+
+
+abstract Product {
+    #kodeProduk: String;
+    #namaProduk: String;
+    #hargaProduk: int;
+    +Product(String kodeProduk, String namaProduk, int hargaProduk)
+    +String getKodeProduk()
+    +void setKodeProduk(String kodeProduk)
+    +String getNamaProduk()
+    +void setNamaProduk(String namaProduk)
+    +int getHargaProduk()
+    +void setHargaProduk(int hargaProduk)
+}
+
+class ProductOrder {
+    -pcs: int
+    +ProductOrder(String kodeProduk, String namaProduk, int hargaProduk, int pcs)
+    +int getPcs()
+    +void setPcs(int pcs)
+    +void setHargaProduk(int hargaProduk, int pcs)
+}
+
+
+class ProductView {
+-deskripsiProduk: String
++ProductView(String kodeProduk, String namaProduk, int hargaProduk, String deskripsiProduk)
++String getDeskripsiProduk()
++void setDeskripsiProduk(String deskripsiProduk)
+}
+
+
+
+
+
+class HashCollectionList<O> {
+    -dataHash: Hashmap<String, 0>
     +HashCollectionList()
-    +exist(String userhash)
-    +addUser(String userhash, O user)
-    +deleteUser(String userhash)
-    +getUser(String userhash)
-    +updateUser(String userhash, O updatedUser)
+    +Collection values()
+    +boolean exist(String datahash)
+    +boolean addData(String datahash, O data)
+    +void deleteData(String datahash)
+    +O getData(String datahash)
+    +boolean updateData(String datahash, O updatedData)
+    +void resetData()
+    +ArrayList convertToArrayList()
 
 }
 
-User <|-- Admin
+class HashMap {}
+
+HashCollectionList --|> HashMap
 User <|-- Customer
-HashCollectionList *-- Admin
-HashCollectionList *-- Customer
+User <|-- Admin
+Product <|-- ProductOrder
+Product <|-- ProductView
+ Admin --* HashCollectionList
+Customer --* HashCollectionList
+ProductView --* HashCollectionList
+ProductOrder --* HashCollectionList
 @enduml

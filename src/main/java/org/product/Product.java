@@ -40,4 +40,5 @@ abstract class Product {
     public void setHargaProduk(int hargaProduk) {
         this.hargaProduk = hargaProduk;
     }
+
 }

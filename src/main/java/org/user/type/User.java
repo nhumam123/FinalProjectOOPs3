@@ -43,4 +43,15 @@ public abstract class User {
         this.password = password;
     }
 
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }

@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7251ce-8f80-4a25-b1d2-339c210c7720" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/collection/HashCollectionsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/product/ProductView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/user/type/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +127,7 @@
       <workItem from="1674113977868" duration="5895000" />
       <workItem from="1674520974963" duration="7741000" />
       <workItem from="1674541198095" duration="23286000" />
-      <workItem from="1674613077529" duration="9515000" />
+      <workItem from="1674613077529" duration="12394000" />
     </task>
     <task id="LOCAL-00001" summary="Perubahan Product Class, Optimisasi GUI MenuUtamaEtoko">
       <created>1673272059335</created>
@@ -264,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674621548364</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="akhir 4">
+      <created>1674625205876</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674625205876</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

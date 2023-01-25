@@ -12,6 +12,10 @@ public class ProductOrder extends Product{
         return pcs;
     }
 
+    public void setPcs(int pcs) {
+        this.pcs = pcs;
+    }
+
     public void setHargaProduk(int hargaProduk, int pcs) {
         this.hargaProduk = hargaProduk * pcs;
         this.pcs = pcs;

@@ -17,5 +17,7 @@ public class ProductView extends Product{
         return deskripsiProduk;
     }
 
-
+    public void setDeskripsiProduk(String deskripsiProduk) {
+        this.deskripsiProduk = deskripsiProduk;
+    }
 }
