@@ -196,6 +196,17 @@ public class CustomerMenu extends JFrame {
             }
         });
 
+        userBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AccountInfo accountInfo = new AccountInfo(
+                        userObj.getUsername(),
+                        userObj.getFullname(),
+                        userObj.getEmail(),
+                        userObj.getPhoneNumber()
+                );
+            }
+        });
     }
 
     private void getSelectedRow() {

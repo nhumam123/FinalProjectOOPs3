@@ -54,6 +54,7 @@ public class MenuLogin extends JFrame{
                     setVisible(true);
                     if (role == 1) {
                         adminMenu.setVisible(true);
+                        adminMenu.setAdmin(admins.getData(accFoundUsername));
                     } else if (role == 2) {
                         CustomerMenu menuUtamaEtoko = new CustomerMenu(
                                 customerUsers.getData(accFoundUsername),

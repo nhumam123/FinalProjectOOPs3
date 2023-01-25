@@ -19,6 +19,18 @@ public abstract class User {
         return username;
     }
 
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }

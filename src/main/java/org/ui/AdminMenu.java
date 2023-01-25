@@ -3,6 +3,7 @@ package org.ui;
 import org.collection.HashCollectionsList;
 import org.product.ProductView;
 import org.tablemodel.TokoTableModel;
+import org.user.type.Admin;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -26,6 +27,7 @@ public class AdminMenu extends JFrame {
     private JTextPane textPane1;
     private JButton addDataBtn;
     private JButton addDataBtn2;
+    private JButton userButton;
     private JButton logoutButton;
     private JTable tableUpdate;
 
@@ -33,6 +35,8 @@ public class AdminMenu extends JFrame {
     private HashCollectionsList<ProductView> productViewHashCollectionsList;
 
     private TableModel tokoDataModel;
+
+    private Admin admin;
 
 
 
@@ -144,9 +148,18 @@ public class AdminMenu extends JFrame {
                 //refreshTable();
             }
         });
-
+        userButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AccountInfo accountInfo = new AccountInfo(
+                        admin.getUsername(),
+                        admin.getFullname(),
+                        admin.getEmail(),
+                        admin.getPhoneNumber()
+                );
+            }
+        });
     }
-
 
     public boolean deleteConfirmation(Component parentComponent) {
         int confirm = JOptionPane.showConfirmDialog(parentComponent, "Apakah anda yakin untuk menghapus item ini?", "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
@@ -166,6 +179,11 @@ public class AdminMenu extends JFrame {
         tableProdukAdmin.setVisible(true);
         tableProdukAdmin.repaint();
         tableProdukAdmin.repaint();
+    }
+
+    public void setAdmin(Admin admin){
+        this.admin = admin;
+        userButton.setText(admin.getUsername());
     }
 
     public HashCollectionsList<ProductView> returnProductView() {
